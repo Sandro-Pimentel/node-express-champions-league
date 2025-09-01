@@ -1,14 +1,39 @@
 [
-    {
-        "id": 1,
-        "name": "Real Madrid"
-    },
-    {
-        "id": 2,
-        "name": "Barcelona"
-    },
-    {
-        "id": 3,
-        "name": "Atletico de Madrid"
-    }
+    { "id": 1, "name": "Paris Saint-Germain", "country": "France" },
+    { "id": 2, "name": "Real Madrid", "country": "Spain" },
+    { "id": 3, "name": "Manchester City", "country": "England" },
+    { "id": 4, "name": "Bayern München", "country": "Germany" },
+    { "id": 5, "name": "Liverpool", "country": "England" },
+    { "id": 6, "name": "Inter Milan", "country": "Italy" },
+    { "id": 7, "name": "Chelsea", "country": "England" },
+    { "id": 8, "name": "Borussia Dortmund", "country": "Germany" },
+    { "id": 9, "name": "Barcelona", "country": "Spain" },
+    { "id": 10, "name": "Arsenal", "country": "England" },
+    { "id": 11, "name": "Bayer Leverkusen", "country": "Germany" },
+    { "id": 12, "name": "Atletico de Madrid", "country": "Spain" },
+    { "id": 13, "name": "Benfica", "country": "Portugal" },
+    { "id": 14, "name": "Atalanta", "country": "Italy" },
+    { "id": 15, "name": "Villarreal", "country": "Spain" },
+    { "id": 16, "name": "Juventus", "country": "Italy" },
+    { "id": 17, "name": "Eintracht Frankfurt", "country": "Germany" },
+    { "id": 18, "name": "Club Brugge", "country": "Belgium" },
+    { "id": 19, "name": "Tottenham Hotspur", "country": "England" },
+    { "id": 20, "name": "PSV Eindhoven", "country": "Netherlands" },
+    { "id": 21, "name": "Ajax", "country": "Netherlands" },
+    { "id": 22, "name": "Napoli", "country": "Italy" },
+    { "id": 23, "name": "Sporting CP", "country": "Portugal" },
+    { "id": 24, "name": "Olympiacos", "country": "Greece" },
+    { "id": 25, "name": "Slavia Praha", "country": "Czech Republic" },
+    { "id": 26, "name": "Bodø/Glimt", "country": "Norway" },
+    { "id": 27, "name": "Olympique de Marseille", "country": "France" },
+    { "id": 28, "name": "Monaco", "country": "France" },
+    { "id": 29, "name": "Galatasaray", "country": "Turkey" },
+    { "id": 30, "name": "Athletic Club", "country": "Spain" },
+    { "id": 31, "name": "Union Saint-Gilloise", "country": "Belgium" },
+    { "id": 32, "name": "Kairat Almaty", "country": "Kazakhstan" },
+    { "id": 33, "name": "Qarabağ", "country": "Azerbaijan" },
+    { "id": 34, "name": "Feyenoord", "country": "Netherlands" },
+    { "id": 35, "name": "Newcastle United", "country": "England" },
+    { "id": 36, "name": "RB Leipzig", "country": "Germany" }
 ]
+  

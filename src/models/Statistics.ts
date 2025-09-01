@@ -1,9 +1,9 @@
 export interface Statistics {
     overall: number;
-    pace: number;
-    shooting: number;
-    passing: number;
+    attacking: number;
     dribbling: number;
     defending: number;
-    physical: number;
+    passing: number;
+    physicality: number;
+    goalkeeping: number;
 }

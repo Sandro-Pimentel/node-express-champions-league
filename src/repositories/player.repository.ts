@@ -1,25 +1,36 @@
 import { Player } from "../models/Player";
 import { Statistics } from "../models/Statistics";
-
-const database: Player[] = [];
+import fs from "fs/promises";
 
 export const findAllPlayers = async (): Promise<Player[]> => {
-    return database;
+    const data = await fs.readFile("./src/data/players.json", "utf-8");
+    const clubs: Player[] = JSON.parse(data);
+
+    return clubs;
 }
 
 export const findPlayerById = async (id: number): Promise<Player | undefined> => {
-    return database.find(player => player.id === id);
+    const data = await fs.readFile("./src/data/players.json", "utf-8");
+    const clubs: Player[] = JSON.parse(data);
+    
+    return clubs.find(player => player.id === id);
 }
 
 export const createPlayer = async (playerData: Player): Promise<void> => {
-    database.push(playerData);
+    const data = await fs.readFile("./src/data/players.json", "utf-8");
+    const clubs: Player[] = JSON.parse(data);
+
+    clubs.push(playerData);
 }
 
 export const removePlayer = async (id: number): Promise<boolean> => {
-    const index = database.findIndex(player => player.id === id);
+    const data = await fs.readFile("./src/data/players.json", "utf-8");
+    const clubs: Player[] = JSON.parse(data);
+
+    const index = clubs.findIndex(player => player.id === id);
     
     if(index !== -1) {
-        database.splice(index, 1);
+        clubs.splice(index, 1);
         return true;
     }
 
@@ -27,11 +38,14 @@ export const removePlayer = async (id: number): Promise<boolean> => {
 }
 
 export const updatePlayer = async (id: number, body: Statistics): Promise<Player> => {
-    const index = database.findIndex(player => player.id === id);
+    const data = await fs.readFile("./src/data/players.json", "utf-8");
+    const clubs: Player[] = JSON.parse(data);
+    
+    const index = clubs.findIndex(player => player.id === id);
 
     if(index !== -1) {
-        database[index].statistics = body;
+        clubs[index].statistics = body;
     }
 
-    return database[index];
+    return clubs[index];
 }

@@ -1,3 +1,226 @@
 [
-    
+    {
+        "id": 1,
+        "name": "Mohamed Salah",
+        "clubId": 5,
+        "nationality": "Egyptian",
+        "position": "Right Forward",
+        "statistics": {
+            "overall": 94,
+            "attacking": 84,
+            "dribbling": 86,
+            "defending": 49,
+            "passing": 71,
+            "physicality": 81,
+            "goalkeeping": 40
+        }
+    },
+    {
+        "id": 2,
+        "name": "Erling Haaland",
+        "clubId": 3,
+        "nationality": "Norwegian",
+        "position": "Striker",
+        "statistics": {
+            "overall": 95,
+            "attacking": 91,
+            "dribbling": 67,
+            "defending": 56,
+            "passing": 64,
+            "physicality": 83,
+            "goalkeeping": 40
+        }
+    },
+    {
+        "id": 3,
+        "name": "Bukayo Saka",
+        "clubId": 10,
+        "nationality": "English",
+        "position": "Right Forward",
+        "statistics": {
+            "overall": 94,
+            "attacking": 80,
+            "dribbling": 87,
+            "defending": 56,
+            "passing": 75,
+            "physicality": 81,
+            "goalkeeping": 40
+        }
+    },
+    {
+        "id": 4,
+        "name": "Anthony Gordon",
+        "clubId": 35,
+        "nationality": "English",
+        "position": "Left Forward",
+        "statistics": {
+            "overall": 93,
+            "attacking": 78,
+            "dribbling": 83,
+            "defending": 58,
+            "passing": 71,
+            "physicality": 84,
+            "goalkeeping": 40
+        }
+    },
+    {
+        "id": 5,
+        "name": "Cole Palmer",
+        "clubId": 7,
+        "nationality": "English",
+        "position": "Attacking Midfielder",
+        "statistics": {
+            "overall": 95,
+            "attacking": 82,
+            "dribbling": 88,
+            "defending": 60,
+            "passing": 80,
+            "physicality": 76,
+            "goalkeeping": 40
+        }
+    },
+    {
+        "id": 6,
+        "name": "João Palinha",
+        "clubId": 19,
+        "nationality": "Portuguese",
+        "position": "Defensive Midfielder",
+        "statistics": {
+            "overall": 91,
+            "attacking": 67,
+            "dribbling": 69,
+            "defending": 84,
+            "passing": 66,
+            "physicality": 75,
+            "goalkeeping": 40
+        }
+    },
+    {
+        "id": 7,
+        "name": "Vinícius Júnior",
+        "clubId": 2,
+        "nationality": "Brazilian",
+        "position": "Left Wing Forward",
+        "statistics": {
+            "overall": 94,
+            "attacking": 85,
+            "dribbling": 92,
+            "defending": 45,
+            "passing": 78,
+            "physicality": 78,
+            "goalkeeping": 40
+        }
+    },
+    {
+        "id": 8,
+        "name": "Lautaro Martínez",
+        "clubId": 6,
+        "nationality": "Argentinian",
+        "position": "Striker",
+        "statistics": {
+            "overall": 94,
+            "attacking": 89,
+            "dribbling": 82,
+            "defending": 50,
+            "passing": 72,
+            "physicality": 83,
+            "goalkeeping": 40
+        }
+    },
+    {
+        "id": 9,
+        "name": "Jamal Musiala",
+        "clubId": 4,
+        "nationality": "German",
+        "position": "Attacking Midfielder",
+        "statistics": {
+            "overall": 93,
+            "attacking": 79,
+            "dribbling": 90,
+            "defending": 52,
+            "passing": 81,
+            "physicality": 75,
+            "goalkeeping": 40
+        }
+    },
+    {
+        "id": 10,
+        "name": "Kylian Mbappé",
+        "clubId": 1,
+        "nationality": "French",
+        "position": "Striker",
+        "statistics": {
+            "overall": 96,
+            "attacking": 92,
+            "dribbling": 90,
+            "defending": 44,
+            "passing": 78,
+            "physicality": 84,
+            "goalkeeping": 40
+        }
+    },
+    {
+        "id": 11,
+        "name": "Federico Valverde",
+        "clubId": 2,
+        "nationality": "Uruguayan",
+        "position": "Centre Midfielder",
+        "statistics": {
+        "overall": 86,
+        "attacking": 76,
+        "dribbling": 72,
+        "defending": 68,
+        "passing": 70,
+        "physicality": 80,
+        "goalkeeping": 40
+        }
+    },
+    {
+        "id": 12,
+        "name": "Manuel Locatelli",
+        "clubId": 16,
+        "nationality": "Italian",
+        "position": "Defensive Midfielder",
+        "statistics": {
+        "overall": 83,
+        "attacking": 68,
+        "dribbling": 74,
+        "defending": 72,
+        "passing": 78,
+        "physicality": 73,
+        "goalkeeping": 40
+        }
+    },
+    {
+        "id": 13,
+        "name": "Dusan Vlahović",
+        "clubId": 16,
+        "nationality": "Serbian",
+        "position": "Centre Forward",
+        "statistics": {
+        "overall": 83,
+        "attacking": 80,
+        "dribbling": 68,
+        "defending": 59,
+        "passing": 69,
+        "physicality": 75,
+        "goalkeeping": 40
+        }
+    },
+    {
+        "id": 14,
+        "name": "Timothy Weah",
+        "clubId": 27,
+        "nationality": "American",
+        "position": "Right Midfielder",
+        "statistics": {
+        "overall": 79,
+        "attacking": 71,
+        "dribbling": 72,
+        "defending": 62,
+        "passing": 66,
+        "physicality": 76,
+        "goalkeeping": 40
+        }
+    } 
 ]
