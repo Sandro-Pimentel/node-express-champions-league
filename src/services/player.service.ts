@@ -1,6 +1,6 @@
-import { Player } from "../models/Player";
+import { PlayerData, PlayerResponse } from "../models/Player";
 import { Statistics } from "../models/Statistics";
-import { createPlayer, findAllPlayers, findPlayerById, removePlayer, updatePlayer } from "../repositories/player.repository";
+import { createPlayer, findAllPlayers, findPlayerById, removePlayer, updatePlayerData, updatePlayerStats } from "../repositories/player.repository";
 import * as HttpResponse from "../utils/HttpHelper";
 
 export const getPlayerService = async () => {
@@ -29,7 +29,7 @@ export const getPlayerByIdService = async (id: number) => {
     return response;
 }
 
-export const postPlayerService = async (playerData: Player) => {
+export const postPlayerService = async (playerData: PlayerResponse) => {
     let response = null;
 
     if(Object.keys(playerData).length !== 0) {
@@ -52,10 +52,24 @@ export const deletePlayerService = async (id: number) => {
     return response;
 }
 
-export const patchPlayerService = async (id: number, body: Statistics) => {
+export const patchPlayerStatsService = async (id: number, body: Statistics) => {
     let response = null;
 
-    const data = await updatePlayer(id, body);
+    const data = await updatePlayerStats(id, body);
+
+    if(Object.keys(data).length === 0) {
+        response = await HttpResponse.badRequest();
+    } else {
+        response = await HttpResponse.ok(data);
+    }
+
+    return response;
+}
+
+export const patchPlayerDataService = async (id: number, body: PlayerData) => {
+    let response = null;
+
+    const data = await updatePlayerData(id, body);
 
     if(Object.keys(data).length === 0) {
         response = await HttpResponse.badRequest();

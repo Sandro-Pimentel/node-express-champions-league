@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getPlayer, getPlayerById, postPlayer, deletePlayer, patchPlayer } from "../controllers/player.controller";
+import { getPlayer, getPlayerById, postPlayer, deletePlayer, patchPlayerStats, patchPlayerData } from "../controllers/player.controller";
 
 const router = Router();
 
@@ -10,6 +10,7 @@ router.post(`/players`, postPlayer);
 
 router.delete(`/players/:id`, deletePlayer);
 
-router.patch(`/players/:id`, patchPlayer);
+router.patch(`/players/:id`, patchPlayerData);
+router.patch(`/players/stats/:id`, patchPlayerStats);
 
 export default router;
