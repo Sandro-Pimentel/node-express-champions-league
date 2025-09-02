@@ -3,8 +3,8 @@ import { Statistics } from "../models/Statistics";
 import { createPlayer, findAllPlayers, findPlayerById, removePlayer, updatePlayerData, updatePlayerStats } from "../repositories/player.repository";
 import * as HttpResponse from "../utils/HttpHelper";
 
-export const getPlayerService = async () => {
-    const data = await findAllPlayers();
+export const getPlayerService = async (filters: any) => {
+    const data = await findAllPlayers(filters);
     let response = null;
 
     if(data) {

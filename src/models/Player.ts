@@ -20,6 +20,6 @@ export interface PlayerRequest {
 export interface PlayerData {
     name: string;
     clubId: number;
-    nationality: number;
+    nationality: string;
     position: string;
 }

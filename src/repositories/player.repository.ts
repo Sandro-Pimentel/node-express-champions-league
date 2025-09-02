@@ -2,43 +2,49 @@ import { PlayerData, PlayerRequest, PlayerResponse } from "../models/Player";
 import { Statistics } from "../models/Statistics";
 import fs from "fs/promises";
 
-export const findAllPlayers = async (): Promise<PlayerResponse[]> => {
+export const findAllPlayers = async (filters: any): Promise<PlayerResponse[]> => {
     const data = await fs.readFile("./src/data/players.json", "utf-8");
-    const clubs: PlayerResponse[] = JSON.parse(data);
+    let players: PlayerResponse[] = JSON.parse(data);
 
-    return clubs;
+    if(filters.name) players = players.filter(player => player.name.toLowerCase().includes(filters.name.toLowerCase()));
+    
+    if(filters.nationality) players = players.filter(player => player.nationality.toLowerCase().includes(filters.nationality.toLowerCase()));
+
+    if(filters.position) players = players.filter(player => player.position.toLowerCase().includes(filters.position.toLowerCase()));
+    
+    return players;
 }
 
 export const findPlayerById = async (id: number): Promise<PlayerResponse | undefined> => {
     const data = await fs.readFile("./src/data/players.json", "utf-8");
-    const clubs: PlayerResponse[] = JSON.parse(data);
+    const players: PlayerResponse[] = JSON.parse(data);
     
-    return clubs.find(player => player.id === id);
+    return players.find(player => player.id === id);
 }
 
 export const createPlayer = async (playerData: PlayerRequest): Promise<void> => {
     const data = await fs.readFile("./src/data/players.json", "utf-8");
-    const clubs: PlayerResponse[] = JSON.parse(data);
+    const players: PlayerResponse[] = JSON.parse(data);
     
     let id = 0;
 
-    clubs.forEach(club => {
-        if(club.id > id) id = club.id + 1;
+    players.forEach(club => {
+        if(club.id >= id) id = club.id + 1;
     })
 
-    clubs.push({...playerData, id});
-    await fs.writeFile("./src/data/players.json", JSON.stringify(clubs));
+    players.push({id, ...playerData});
+    await fs.writeFile("./src/data/players.json", JSON.stringify(players));
 }
 
 export const removePlayer = async (id: number): Promise<boolean> => {
     const data = await fs.readFile("./src/data/players.json", "utf-8");
-    const clubs: PlayerResponse[] = JSON.parse(data);
+    const players: PlayerResponse[] = JSON.parse(data);
 
-    const index = clubs.findIndex(player => player.id === id);
+    const index = players.findIndex(player => player.id === id);
     
     if(index !== -1) {
-        clubs.splice(index, 1);
-        await fs.writeFile("./src/data/players.json", JSON.stringify(clubs));
+        players.splice(index, 1);
+        await fs.writeFile("./src/data/players.json", JSON.stringify(players));
         return true;
     }
 
@@ -47,28 +53,29 @@ export const removePlayer = async (id: number): Promise<boolean> => {
 
 export const updatePlayerStats = async (id: number, body: Statistics): Promise<PlayerResponse> => {
     const data = await fs.readFile("./src/data/players.json", "utf-8");
-    const clubs: PlayerResponse[] = JSON.parse(data);
+    const players: PlayerResponse[] = JSON.parse(data);
     
-    const index = clubs.findIndex(player => player.id === id);
+    const index = players.findIndex(player => player.id === id);
 
     if(index !== -1) {
-        clubs[index].statistics = body;
-        await fs.writeFile("./src/data/players.json", JSON.stringify(clubs));
+        players[index].statistics = body;
+        await fs.writeFile("./src/data/players.json", JSON.stringify(players));
     }
 
-    return clubs[index];
+    return players[index];
 }
 
 export const updatePlayerData = async (id: number, body: PlayerData): Promise<PlayerResponse> => {
     const data = await fs.readFile("./src/data/players.json", "utf-8");
-    const clubs: PlayerResponse[] = JSON.parse(data);
+    const players: PlayerResponse[] = JSON.parse(data);
     
-    const index = clubs.findIndex(player => player.id === id);
+    const index = players.findIndex(player => player.id === id);
 
     if(index !== -1) {
-        clubs[index] = {...body, ...clubs[index]};
-        await fs.writeFile("./src/data/players.json", JSON.stringify(clubs));
+        //players[index] = {id, ...body, statistics: players[index].statistics};
+        players[index] = {...players[index], ...body};
+        await fs.writeFile("./src/data/players.json", JSON.stringify(players));
     }
 
-    return clubs[index];
+    return players[index];
 }

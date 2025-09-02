@@ -4,7 +4,8 @@ import { Statistics } from "../models/Statistics";
 import { PlayerData, PlayerRequest } from "../models/Player";
 
 export const getPlayer = async (req: Request, res: Response) => {
-    const httpResponse = await getPlayerService();
+    const { query } = req;
+    const httpResponse = await getPlayerService(query);
 
     return res.status(httpResponse.statuscode).json(httpResponse.body);
 }
