@@ -58,7 +58,7 @@ export const updatePlayerStats = async (id: number, body: Statistics): Promise<P
     const index = players.findIndex(player => player.id === id);
 
     if(index !== -1) {
-        players[index].statistics = body;
+        players[index].statistics = {...players[index].statistics, ...body};
         await fs.writeFile("./src/data/players.json", JSON.stringify(players));
     }
 
