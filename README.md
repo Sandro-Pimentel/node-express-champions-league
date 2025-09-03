@@ -75,7 +75,7 @@ Foi criada uma api rest com express e typescript, tema envolvendo clubes da cham
 
 **?name=** para filtrar os players pelo nome
 
-/api/podcasts/?name=lah
+```/api/podcasts/?name=lah```
 
 ```
 [
@@ -116,7 +116,7 @@ Foi criada uma api rest com express e typescript, tema envolvendo clubes da cham
 
 **?nationality=** para filtrar os players pela nacionalidade:
 
-/api/podcasts/?nationality=it
+```/api/podcasts/?nationality=it```
 
 ```
 [
@@ -141,7 +141,7 @@ Foi criada uma api rest com express e typescript, tema envolvendo clubes da cham
 
 **?position=** para filtrar os players pela posição:
 
-/api/podcasts/?position=right m
+```/api/podcasts/?position=right m```
 
 ```
 [
@@ -249,7 +249,7 @@ Foi criada uma api rest com express e typescript, tema envolvendo clubes da cham
 
 **?name=** para filtrar os clubs pelo nome
 
-/api/podcasts/?name=ar
+```/api/podcasts/?name=ar```
 
 ```
 [
@@ -267,7 +267,7 @@ Foi criada uma api rest com express e typescript, tema envolvendo clubes da cham
 ```
 **?country=** para filtrar os clubs pelo país
 
-/api/podcasts/?country=s
+```/api/podcasts/?country=s```
 
 ```
 [
