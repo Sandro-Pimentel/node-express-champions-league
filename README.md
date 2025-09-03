@@ -4,7 +4,7 @@
 
 ## Descrição do Projeto
 
-Foi criada uma api rest com express e typescript, tema envolvendo clubes da champions league. Foram criadas as rotas de get para os clubes e jogadores e
+Foi criada uma api rest com express e typescript, tema envolvendo clubes da champions league. Foram criadas as rotas de get para os clubes e jogadores e as rotas post, patch e delete para os jogadores.
 
 ## Endpoints
 
